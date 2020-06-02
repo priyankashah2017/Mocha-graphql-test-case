@@ -1,0 +1,40 @@
+{
+     "name": "mocha-test-case",
+     "version": "1.0.0",
+     "description": "this is to understand the demo.",
+     "main": "server.js",
+     "author": "Priyanka Shah",
+     "license": "ISC",
+     "directories": {
+          "test": "test"
+     },
+     "scripts": {
+          "test": "mocha --require @babel/register './test/index.spec.js'",
+          "start": "nodemon --exec babel-node ./index.js",
+          "dev": "nodemon index.js ENV=dev --exec babel-node --presets babel-preset-env",
+          "prod": "mocha --compilers js:@babel/register"
+     },
+     "devDependencies": {
+          "@babel/core": "^7.2.2",
+          "@babel/node": "^7.2.2",
+          "@babel/preset-env": "^7.2.3",
+          "@babel/register": "^7.10.1",
+          "chai": "^4.2.0",
+          "chai-http": "4.2.1",
+          "mocha": "^5.2.0",
+          "nodemon": "^1.19.4"
+     },
+     "dependencies": {
+          "apollo-server-express": "^2.9.9",
+          "axios": "^0.19.2",
+          "body-parser": "^1.19.0",
+          "cors": "^2.8.5",
+          "dotenv": "^8.2.0",
+          "express": "^4.17.1",
+          "graphql-type-json": "^0.3.0",
+          "jsonwebtoken": "^8.5.1",
+          "pg": "^7.12.1",
+          "pg-promise": "^10.3.5",
+          "sequelize": "^5.21.2"
+     }
+}
